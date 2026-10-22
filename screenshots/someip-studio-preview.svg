@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14"/>
+      <stop offset="100%" stop-color="#0f1623"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#151f32"/>
+      <stop offset="100%" stop-color="#0d1522"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bgGrad)"/>
+
+  <!-- Top Navigation Bar -->
+  <rect x="0" y="0" width="1200" height="60" fill="#131c2e" stroke="#1e2c44" stroke-width="1"/>
+  <rect x="24" y="14" width="125" height="32" rx="6" fill="url(#badgeGrad)"/>
+  <text x="33" y="35" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800">SOME/IP FORGE</text>
+  <text x="160" y="36" fill="#ffffff" font-family="'Inter', sans-serif" font-size="16" font-weight="700">SOMEIPForge Pro <tspan fill="#38bdf8" font-size="12">v1.0.0</tspan></text>
+  <text x="330" y="35" fill="#64748b" font-family="'Inter', sans-serif" font-size="12">AUTOSAR SOME/IP &amp; SOME/IP-SD Automotive SOA Studio</text>
+
+  <!-- Badges in Header -->
+  <rect x="730" y="17" width="135" height="26" rx="4" fill="rgba(6,182,212,0.1)" stroke="rgba(6,182,212,0.4)"/>
+  <text x="742" y="34" fill="#06b6d4" font-family="'Inter', sans-serif" font-size="11" font-weight="600">AUTOSAR FO R22-11</text>
+  <rect x="875" y="17" width="130" height="26" rx="4" fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.4)"/>
+  <text x="888" y="34" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">SOME/IP-SD 0xFFFF</text>
+  <rect x="1015" y="17" width="160" height="26" rx="4" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.4)"/>
+  <text x="1028" y="34" fill="#10b981" font-family="'Inter', sans-serif" font-size="11" font-weight="600">E2E CRC-32 &amp; SecOC</text>
+
+  <!-- Sub Navigation Tabs -->
+  <rect x="0" y="60" width="1200" height="42" fill="#0f1623" stroke="#1e2c44" stroke-width="1"/>
+  <text x="40" y="86" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Protocol Studio &amp; Hex Inspector</text>
+  <line x1="30" y1="101" x2="250" y2="101" stroke="#38bdf8" stroke-width="2"/>
+  <text x="290" y="86" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" font-weight="600">SOME/IP-SD Service Discovery</text>
+  <text x="540" y="86" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" font-weight="600">ISO 21434 &amp; SecOC Auditor</text>
+  <text x="780" y="86" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Gateway Firewall &amp; ARXML</text>
+  <text x="1000" y="86" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" font-weight="600">SOA Lifecycle Simulator</text>
+
+  <!-- Left Card: Message Builder -->
+  <rect x="30" y="125" width="550" height="540" rx="8" fill="url(#cardGrad)" stroke="#1e2c44" stroke-width="1"/>
+  <text x="50" y="155" fill="#ffffff" font-family="'Inter', sans-serif" font-size="15" font-weight="700">16-Byte Header &amp; Payload Synthesizer</text>
+  <rect x="420" y="140" width="140" height="22" rx="4" fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.3)"/>
+  <text x="435" y="155" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="10" font-weight="600">AUTOSAR PRS_SOMEIP</text>
+
+  <!-- Form Fields -->
+  <text x="50" y="195" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Service ID (16-bit)</text>
+  <rect x="50" y="205" width="245" height="34" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="65" y="227" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12">0x1000 (Braking Service)</text>
+
+  <text x="315" y="195" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Method ID (16-bit)</text>
+  <rect x="315" y="205" width="245" height="34" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="330" y="227" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12">0x0001 (RequestEmergencyBrake)</text>
+
+  <text x="50" y="265" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Client ID / Session ID</text>
+  <rect x="50" y="275" width="245" height="34" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="65" y="297" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="12">0x0042 (ADAS Planner)</text>
+
+  <rect x="315" y="275" width="245" height="34" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="330" y="297" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="12">0x0001 (Monotonic Seq)</text>
+
+  <text x="50" y="335" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Message Type / Return Code</text>
+  <rect x="50" y="345" width="245" height="34" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="65" y="367" fill="#10b981" font-family="'Inter', sans-serif" font-size="12">0x00 — REQUEST</text>
+
+  <rect x="315" y="345" width="245" height="34" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="330" y="367" fill="#10b981" font-family="'Inter', sans-serif" font-size="12">0x00 — E_OK (No error)</text>
+
+  <text x="50" y="405" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Payload Data + E2E Profile 4 CRC-32 (Hex)</text>
+  <rect x="50" y="415" width="510" height="34" rx="6" fill="#0b121e" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="65" y="437" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">01 FF 00 00 27 60 8C 94</text>
+
+  <!-- Action Buttons -->
+  <rect x="50" y="480" width="165" height="36" rx="6" fill="#38bdf8"/>
+  <text x="68" y="503" fill="#000" font-family="'Inter', sans-serif" font-size="12" font-weight="700">Synthesize Packet</text>
+
+  <rect x="225" y="480" width="165" height="36" rx="6" fill="#1e293b" stroke="#1e2c44"/>
+  <text x="245" y="503" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Export Wireshark PCAP</text>
+
+  <rect x="400" y="480" width="160" height="36" rx="6" fill="#1e293b" stroke="#1e2c44"/>
+  <text x="415" y="503" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Append E2E CRC-32</text>
+
+  <!-- Right Card 1: Hex Dump -->
+  <rect x="610" y="125" width="560" height="180" rx="8" fill="url(#cardGrad)" stroke="#1e2c44" stroke-width="1"/>
+  <text x="630" y="155" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Wire-Level Byte Stream &amp; Hex Dump</text>
+  <rect x="1060" y="140" width="90" height="22" rx="4" fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.3)"/>
+  <text x="1075" y="155" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">24 Bytes</text>
+
+  <rect x="630" y="175" width="520" height="110" rx="6" fill="#060a12" stroke="#1e2c44"/>
+  <text x="645" y="205" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">10 00 00 01 00 00 00 10 00 42 00 01 01 01 00 00 01 FF 00 00 27 60 8C 94</text>
+  <text x="645" y="235" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11">[MsgID: 0x10000001 | Len: 16 | ReqID: 0x00420001 | Proto: 1 | Iface: 1 | Type: 0x00 | Code: 0x00]</text>
+
+  <!-- Right Card 2: Dissection Tree -->
+  <rect x="610" y="325" width="560" height="340" rx="8" fill="url(#cardGrad)" stroke="#1e2c44" stroke-width="1"/>
+  <text x="630" y="355" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Protocol Dissection Tree</text>
+  <rect x="1000" y="340" width="150" height="22" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="1010" y="355" fill="#10b981" font-family="'Inter', sans-serif" font-size="10" font-weight="700">VALID AUTOSAR SOME/IP</text>
+
+  <!-- Dissection Items -->
+  <text x="630" y="395" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Service ID:</text>
+  <text x="1100" y="395" text-anchor="end" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12">0x1000 (VehicleBrakingService)</text>
+  <line x1="630" y1="405" x2="1140" y2="405" stroke="#1e2c44" stroke-dasharray="3,3"/>
+
+  <text x="630" y="430" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Method ID:</text>
+  <text x="1100" y="430" text-anchor="end" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12">0x0001 (RequestEmergencyBrake)</text>
+  <line x1="630" y1="440" x2="1140" y2="440" stroke="#1e2c44" stroke-dasharray="3,3"/>
+
+  <text x="630" y="465" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Client ID / Session ID:</text>
+  <text x="1100" y="465" text-anchor="end" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="12">0x0042 / 0x0001</text>
+  <line x1="630" y1="475" x2="1140" y2="475" stroke="#1e2c44" stroke-dasharray="3,3"/>
+
+  <text x="630" y="500" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Length Field:</text>
+  <text x="1100" y="500" text-anchor="end" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12">16 Bytes (Valid Match)</text>
+  <line x1="630" y1="510" x2="1140" y2="510" stroke="#1e2c44" stroke-dasharray="3,3"/>
+
+  <text x="630" y="535" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">E2E Protection Check:</text>
+  <text x="1100" y="535" text-anchor="end" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12">CRC-32 0x27608C94 (VALID)</text>
+  <line x1="630" y1="545" x2="1140" y2="545" stroke="#1e2c44" stroke-dasharray="3,3"/>
+
+  <text x="630" y="570" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">SecOC Verification:</text>
+  <text x="1100" y="570" text-anchor="end" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12">AES-128-CMAC (AUTHENTICATED)</text>
+</svg>

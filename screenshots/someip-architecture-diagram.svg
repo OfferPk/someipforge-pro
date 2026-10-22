@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14"/>
+      <stop offset="100%" stop-color="#0f1623"/>
+    </linearGradient>
+    <linearGradient id="gwGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="50" y="50" fill="#ffffff" font-family="'Inter', sans-serif" font-size="20" font-weight="800">AUTOSAR SOME/IP &amp; SOME/IP-SD Automotive SOA Architecture</text>
+  <text x="50" y="75" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13">Zero-Trust Service-Oriented Middleware, IEEE 802.1Q VLAN Isolation &amp; SecOC Protection</text>
+
+  <!-- Left Column: ADAS Central Compute -->
+  <rect x="50" y="130" width="250" height="490" rx="8" fill="#131c2e" stroke="#1e2c44" stroke-width="1.5"/>
+  <rect x="50" y="130" width="250" height="36" rx="8" fill="#1e293b"/>
+  <text x="70" y="154" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="13" font-weight="700">ADAS Central Compute</text>
+
+  <rect x="70" y="185" width="210" height="70" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="85" y="210" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Client Identity</text>
+  <text x="85" y="235" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">Client ID: 0x0042</text>
+
+  <rect x="70" y="275" width="210" height="90" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="85" y="300" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Service Discovery</text>
+  <text x="85" y="325" fill="#06b6d4" font-family="'JetBrains Mono', monospace" font-size="11">FindService (0x00)</text>
+  <text x="85" y="345" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">SubscribeEventgroup</text>
+
+  <rect x="70" y="385" width="210" height="90" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="85" y="410" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Method Invocation</text>
+  <text x="85" y="435" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11">RequestEmergencyBrake</text>
+  <text x="85" y="455" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Service 0x1000 / Method 1</text>
+
+  <!-- Physical Link -->
+  <line x1="300" y1="360" x2="420" y2="360" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,4"/>
+  <rect x="315" y="335" width="90" height="24" rx="4" fill="#0b121e" stroke="#38bdf8"/>
+  <text x="323" y="351" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10">1000BASE-T1</text>
+
+  <!-- Central Gateway / Switch (Middle) -->
+  <rect x="420" y="110" width="360" height="530" rx="10" fill="url(#gwGrad)" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="420" y="110" width="360" height="40" rx="10" fill="#1e293b"/>
+  <text x="445" y="136" fill="#ffffff" font-family="'Inter', sans-serif" font-size="15" font-weight="800">SOA Central Gateway ECU</text>
+
+  <!-- Gateway Components -->
+  <rect x="445" y="170" width="310" height="70" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="460" y="195" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="700">Linux nftables SOA Filtering</text>
+  <text x="460" y="215" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Rate Limit Multicast 224.0.0.17 UDP 30490</text>
+  <text x="460" y="230" fill="#10b981" font-family="'Inter', sans-serif" font-size="11">Isolate IVI eth0.200 from ADAS eth1.300</text>
+
+  <rect x="445" y="255" width="310" height="75" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="460" y="280" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="700">SOME/IP-SD Authorization Table</text>
+  <text x="460" y="300" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="11">Static Whitelist: Service 0x1000 -> Node 192.168.1.20</text>
+  <text x="460" y="318" fill="#f43f5e" font-family="'Inter', sans-serif" font-size="11">Drop Rogue OfferService Broadcasts</text>
+
+  <rect x="445" y="345" width="310" height="75" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="460" y="370" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="700">Suricata Layer 7 DPI Engine</text>
+  <text x="460" y="390" fill="#f59e0b" font-family="'Inter', sans-serif" font-size="11">Detect Malformed 16-Byte Headers (SID 90014201)</text>
+  <text x="460" y="408" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Alert on E2E Sequence &amp; CRC Inconsistencies</text>
+
+  <rect x="445" y="435" width="310" height="85" rx="6" fill="#0b121e" stroke="#10b981" stroke-width="1.5"/>
+  <text x="460" y="460" fill="#10b981" font-family="'Inter', sans-serif" font-size="12" font-weight="700">AUTOSAR SecOC Crypto Module</text>
+  <text x="460" y="480" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="11">AES-128-CMAC Message Authentication Code</text>
+  <text x="460" y="500" fill="#f1f5f9" font-family="'Inter', sans-serif" font-size="11">Freshness Value Manager (FVM) Anti-Replay</text>
+
+  <rect x="445" y="535" width="310" height="85" rx="6" fill="#0b121e" stroke="#1e2c44"/>
+  <text x="460" y="560" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="700">E2E Protection &amp; TP Buffer Guard</text>
+  <text x="460" y="580" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">E2E Profile 4 CRC-32 &amp; Alive Counter</text>
+  <text x="460" y="600" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">SOME/IP-TP Reassembly Timeout: 500ms</text>
+
+  <!-- Right Column: Vehicle Subsystems -->
+  <line x1="780" y1="210" x2="880" y2="210" stroke="#f43f5e" stroke-width="2"/>
+  <rect x="880" y="160" width="270" height="90" rx="8" fill="#131c2e" stroke="#1e2c44"/>
+  <text x="900" y="188" fill="#f43f5e" font-family="'Inter', sans-serif" font-size="13" font-weight="700">VLAN 200: Infotainment (IVI)</text>
+  <text x="900" y="210" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Android Automotive OS Head Unit</text>
+  <text x="900" y="230" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="11">Quarantined from Actuator RPCs</text>
+
+  <line x1="780" y1="360" x2="880" y2="360" stroke="#10b981" stroke-width="2"/>
+  <rect x="880" y="310" width="270" height="90" rx="8" fill="#131c2e" stroke="#1e2c44"/>
+  <text x="900" y="338" fill="#10b981" font-family="'Inter', sans-serif" font-size="13" font-weight="700">VLAN 300: Braking &amp; Steering</text>
+  <text x="900" y="360" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Safety-Critical Chassis Domain (ASIL-D)</text>
+  <text x="900" y="380" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="11">Service 0x1000 (SecOC Verified)</text>
+
+  <line x1="780" y1="510" x2="880" y2="510" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="880" y="460" width="270" height="90" rx="8" fill="#131c2e" stroke="#1e2c44"/>
+  <text x="900" y="488" fill="#06b6d4" font-family="'Inter', sans-serif" font-size="13" font-weight="700">Multicast SD Bus (224.0.0.17)</text>
+  <text x="900" y="510" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Dynamic SOA Service Discovery</text>
+  <text x="900" y="530" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="11">UDP 30490 Rate Limited</text>
+</svg>
